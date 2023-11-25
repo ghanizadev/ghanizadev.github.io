@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ghanizadev</title>
+    <script
+      src="https://unpkg.com/htmx.org@1.9.9"
+      integrity="sha384-QFjmbokDn2DjBjq+fM+8LUIVrAgqcNW2s0PjAxHETgRn9l4fvX31ZxDxvwQnyMOX"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/buzz/style.css" />
+    <script src="/buzz/index.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Random buzz</h1>
+      <label for="select">Effect name</label>
+      <select id="select">
+        <option value="none" selected disabled>Select...</option>
+        <option value="claps">Clap</option>
+        <option value="birds">Me and the birds (Sisyphus)</option>
+        <option value="scream">Scream</option>
+      </select>
+      <br />
+      <p><strong>Level</strong></p>
+      <span id="level-percentage">20.0%</span>
+      <div
+        id="level"
+        class="knob"
+        style="transform: rotate(-90deg)"
+        data-value="200"
+      >
+        <div class="point"></div>
+      </div>
+      <p><strong>Volume</strong></p>
+      <span id="volume-percentage">80.0%</span>
+      <div
+        id="volume"
+        class="knob volume"
+        style="transform: rotate(90deg)"
+        data-value="800"
+      >
+        <div class="point"></div>
+      </div>
+      <audio id="audio"></audio>
+    </main>
+  </body>
+</html>
